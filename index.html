@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Portfolio</title>
 </head>
 
-<body onresize="resize()">
+<body onresize="resize()" onload="resize()" >
     <div class="navbar" id="navbar">
          <div class="logo">
             <h2>#KAIN</h2>
@@ -22,8 +22,10 @@
             <a href="#services">Services</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#contact">Contact-me</a>
-            <i class="uil uil-moon menu_moon night-mode" id="night-mode"></i>
-            <!-- <i class="uil uil-sun sun" id="sun"></i> -->
+
+            <i class="uil uil-moon menu_moon night-mode" id="night-mode" onclick="showDay()"></i>
+
+            <i class="uil uil-sun sun" id="day-mode" ></i>
             
         </div>
     </div>
@@ -35,7 +37,7 @@
             </div>
             <div class="after-btn">
 
-                <i class="uil uil-moon menu_moon night-mode" id="night-mode"></i>
+                <i class="uil uil-moon menu_moon night-mode" id="night-mode-after"></i>
             
                 <i class="uil uil-apps" id="appIcon"></i>
             </div>
@@ -401,11 +403,14 @@
             <h1 class="heading">Portfolio</h1>
             <p class="heading-para">What i done</p>
         </div>
+
         <div class="portfolio-container">
             <div class="portfolio-left-btn" id="left-btn" onclick="slideshow_controller(-1)">
                 <i class="uil uil-angle-left"></i>
            </div>
+
            <div class="portfolio-right-btn" id="right-btn"onclick="slideshow_controller(1)">
+
             <i class="uil uil-angle-right"></i>
         </div>
 

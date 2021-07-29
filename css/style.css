@@ -153,8 +153,11 @@ html {
   font-size: 40px;
   color: gray;
   padding-left: 10px;
+  display: none;
+  
   /* padding-bottom: 5px; */
 }
+
 /* .uil-sun{
   display: none;
 }
@@ -777,8 +780,8 @@ html {
   border-radius: 100%;
   left: 49.8%;
   transform: translateY(-102px); 
-  z-index: 500;
-
+  z-index: 400;
+  
 }
 .work-container ul li::after{
   position: absolute;
@@ -789,17 +792,19 @@ html {
   border-radius: 100%;
   left: 49.8%;
   transform: translateY(-102px);
+  z-index: 400;
    
 
 }
-.remove-q-container{
-  display: none;
-
-}
-
 .work-container{
   display: none;
 }
+/* .remove-q-container{
+  display: none;
+
+} */
+
+
 
 @media screen and (max-width: 1500px) {
   .qualification-container{
@@ -869,9 +874,9 @@ html {
 
 @media screen and (max-width: 650px) {
   .q-container,.work-container{
-    display: flex;
+    /* display: flex; */
     justify-content: center;
-    align-items:center ;
+    align-items:center;
   }
 
   .q-container::before{
@@ -1160,7 +1165,7 @@ html {
 
 .testemonial{
   width: 100%;
-  min-height: 70vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -1253,7 +1258,7 @@ html {
 
 .contact{
   width: 100%;
-  height: 80vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   flex-direction: column;
