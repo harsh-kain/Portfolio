@@ -2,6 +2,8 @@
 // responsive navbar 
 resize = () =>{
     let inner_width = window.outerWidth;
+    let inner_height = window.innerHeight;
+    console.log(inner_height);
     let navbar = document.getElementById("navbar")
     let afterNav = document.getElementById("after-nav")
 
@@ -11,6 +13,10 @@ resize = () =>{
        afterNav.classList.add("add-after-nav")
 
    }
+    // else if(inner_height == 640){
+    //    afterNav.classList.add('moto_height');
+    // }
+       
    else{
        navbar.classList.remove("navbar-remove")
        afterNav.classList.remove("add-after-nav")
@@ -21,34 +27,69 @@ resize = () =>{
 
 var appIcons = document.getElementById('appIcon')
 var afterNav = document.getElementById("after-nav");
+const closeAppIcon = document.getElementById('close-app-icon');
 
 appIcons.addEventListener('click' , ()=> {
+    closeAppIconFunc();
+    afterNav.classList.toggle('open-nav')
+})
+closeAppIcon.addEventListener('click' , ()=> {
+    appIconFunc();
     afterNav.classList.toggle('open-nav')
 })
 
 
+closeAppIconFunc = () => {
+    appIcons.style.display = 'none';
+    closeAppIcon.style.display = 'block';
+
+}
+appIconFunc = () => {
+    closeAppIcon.style.display = 'none';
+    appIcons.style.display = 'block';
+}
+
+
+
+
 // skills section start here
-let skillsSection = document.getElementById("front-end-heading");
-let openSkillsSection = document.getElementById("front-end-skills-section");
+// let skillsSection = document.getElementById("front-end-heading");
+// let openSkillsSection = document.getElementById("front-end-skills-section");
 
-let backendSkillsSection = document.getElementById("backend-heading");
-let openBackendSkills =  document.getElementById("backend-end-skills-section");
+// let backendSkillsSection = document.getElementById("backend-heading");
+// let openBackendSkills =  document.getElementById("backend-end-skills-section");
 
-let designSkillsSection = document.getElementById("design-heading");
-let openDesignSection = document.getElementById("design-skills-section");
+// let designSkillsSection = document.getElementById("design-heading");
+// let openDesignSection = document.getElementById("design-skills-section");
+
+// const upArrow = document.getElementById('up-arrow');
+// const downArrow = document.getElementById('down-arrow');
+
+// skillsSection.addEventListener("click" , ()=>{
+//     hideDownArrow();
+//     openSkillsSection.classList.toggle("open-skills-section")
+
+// })
 
 
-skillsSection.addEventListener("click" , ()=>{
-    openSkillsSection.classList.toggle("open-skills-section")
-})
+// backendSkillsSection.addEventListener("click" , ()=>{
+//     hideDownArrow();
+//     openBackendSkills.classList.toggle("open-backend-skills-section")
+// });
 
-backendSkillsSection.addEventListener("click" , ()=>{
-    openBackendSkills.classList.toggle("open-backend-skills-section")
-});
+// designSkillsSection.addEventListener("click" , ()=>{
+//     hideDownArrow();
+//     openDesignSection.classList.toggle("open-design-skills-section")
+// });
 
-designSkillsSection.addEventListener("click" , ()=>{
-    openDesignSection.classList.toggle("open-design-skills-section")
-});
+// hideDownArrow = () => {
+//     downArrow.style.display = 'none';
+//     upArrow.style.display = 'block';
+// }
+// hideUpArrow = () => {
+//     upArrow.style.display = 'none';
+//     downArrow.style.display = 'block';
+// }
 
 
 // qualification section start here 
@@ -112,51 +153,64 @@ slideshow_controller(0);
 const moon = document.getElementById("night-mode");
 const darkNavbar = document.getElementById('navbar')
 const aTag = document.getElementsByTagName('a');
-const sunIcon = document.getElementById('sun')
 const afterNavDarkMode = document.getElementById("night-mode-after");
-
 const darkNavbarAfter = document.getElementById('after-nav');
+const day = document.getElementById('day-mode');
+const sun = document.getElementById('day-mode');
+const afterDayMode = document.getElementById('after-day-mode');
 
-let day = document.getElementById('day-mode');
-let night = document.getElementById('night-mode');
 
+moon.addEventListener('click' , () => {
+    dayIcon();
+    document.body.classList.toggle('dark-theme');
+    darkNavbar.classList.toggle('dark-navbar');
+    aTag.classList.toggle('dark-navbar a');
+    
+})
+sun.addEventListener('click', ()=>{
+    nightIcon();
+    document.body.classList.toggle('dark-theme');
+    darkNavbar.classList.toggle('dark-navbar');
+    aTag.classList.toggle('dark-navbar a');
+})
+
+// switch icon of dark theme 
+// let night = document.getElementById('night-mode');
+
+dayIcon = () => {
+    moon.style.display = 'none';
+    day.style.display = 'block';
+
+}
+
+nightIcon = () => {
+    day.style.display = 'none';
+    moon.style.display = 'block';
+}
 
 
 afterNavDarkMode.addEventListener('click' , () =>{
+    afterDayModeFunc();
+    document.body.classList.toggle('dark-theme');
+    darkNavbarAfter.classList.toggle('dark-navbar')
+})
+afterDayMode.addEventListener('click' , ()=> {
+    afterNightModeFunc();
     document.body.classList.toggle('dark-theme');
     darkNavbarAfter.classList.toggle('dark-navbar')
 })
 
+afterDayModeFunc = () => {
+    afterNavDarkMode.style.display = 'none';
+    afterDayMode.style.display = 'block';
+} 
 
-
-
-showDay = () => {
-    day.style.display = 'block';
-    night.style.display = 'none';
+afterNightModeFunc = () => {
+    afterDayMode.style.display = 'none';
+    afterNavDarkMode.style.display = 'block';
 }
 
-showNight = () => {
-    night.style.display = 'none';
-    day.style.display = 'block';
-}
-
-
-day.addEventListener('click' , ()=>{
-    document.body.classList.toggle('dark-theme');
-    darkNavbar.classList.toggle('dark-navbar');
-    showDay();
-
-})
-moon.addEventListener('click' , () => {
-    document.body.classList.toggle('dark-theme');
-    darkNavbar.classList.toggle('dark-navbar');
-    aTag.classList.toggle('dark-navbar a');
-    showNight();
-    
-
-})
-
-
+// switch icon of skills 
 
 
 
