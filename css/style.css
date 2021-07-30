@@ -113,14 +113,8 @@ html {
 .menu{
   display: flex;
   align-items: center;
-  flex-direction: column;
 }
-.menu-1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+
 .menu a {
   text-decoration: none;
   padding-right: 15px;
