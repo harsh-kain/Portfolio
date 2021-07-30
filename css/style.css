@@ -113,6 +113,13 @@ html {
 .menu{
   display: flex;
   align-items: center;
+  flex-direction: column;
+}
+.menu-1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .menu a {
   text-decoration: none;
@@ -470,7 +477,7 @@ html {
   align-items: center;
   /* padding-left: 20px; */
 }
-.uil-brackets-curly,
+.extra,
 .uil-database,
 .uil-crop-alt {
   font-size: 30px;
@@ -890,6 +897,7 @@ html {
   }
   .education{
     margin-right: 10px;
+    margin-bottom: 15px;
   }
   .work{
     margin-left: 10px;
