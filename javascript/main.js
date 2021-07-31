@@ -94,22 +94,22 @@ appIconFunc = () => {
 
 // qualification section start here 
 
-const education = document.getElementById("education");
-const hideEducation = document.getElementById("q-container")
-const work = document.getElementById("work");
-const hideWork = document.getElementById('work-container')
+// const education = document.getElementById("education");
+// const hideEducation = document.getElementById("q-container")
+// const work = document.getElementById("work");
+// const hideWork = document.getElementById('work-container')
 
 
-work.addEventListener('click' , ()=>{
+// work.addEventListener('click' , ()=>{
 
-    hideEducation.style.display = 'none'
-    hideWork.style.display = 'block';
-})
+//     hideEducation.style.display = 'none'
+//     hideWork.style.display = 'block';
+// })
 
-education.addEventListener('click' , ()=>{
-    hideWork.style.display = 'none';
-    hideEducation.style.display = 'block'
-})
+// education.addEventListener('click' , ()=>{
+//     hideWork.style.display = 'none';
+//     hideEducation.style.display = 'block'
+// })
 
 // portfolio section start here 
 
